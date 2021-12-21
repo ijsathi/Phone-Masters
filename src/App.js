@@ -9,10 +9,13 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import {Navigate, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import AuthProvider from './context/AuthProvider';
+// import SignUp from './components/Button/SignUp';
 
 function App() {
   return (
     <>
+    <AuthProvider>
     <Header></Header>
       <Routes >
         <Route exact path='/' element={<Navigate to='/' />} />
@@ -23,8 +26,10 @@ function App() {
         <Route exact path='checkout' element={<Checkout />} />
         <Route exact path='about' element={<About />} />
         <Route exact path='contact' element={<Contact />} />
+        {/* <Route exact path='signup' element={<SignUp />} /> */}
       </Routes> 
     <Footer></Footer>
+    </AuthProvider>
     </>
   );
 }

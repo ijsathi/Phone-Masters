@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Login from '../Button/Login';
-import SignUp from '../Button/SignUp';
 import logo from '../../images/logo.png'
 import CartBtn from '../Button/CartBtn';
 
@@ -31,7 +30,7 @@ const Header = () => {
         </li>
       </ul>
     <Login/>
-    <SignUp/>
+    {/* <SignUp/> */}
     <CartBtn/>
     </div>
   </div>
