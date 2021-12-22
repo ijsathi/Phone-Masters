@@ -10,7 +10,8 @@ import {Navigate, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import AuthProvider from './context/AuthProvider';
-// import SignUp from './components/Button/SignUp';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,13 +21,16 @@ function App() {
       <Routes >
         <Route exact path='/' element={<Navigate to='/' />} />
         <Route exact index  element={<Home />} />
+        {/* <Route exact path='products' element={<PrivateRoute />} > */}
         <Route exact path='products' element={<Product />} />
+        {/* </Route> */}
         <Route exact path='products/:id' element={<ProductDetails />} />
         <Route exact path='cart' element={<Cart />} />
         <Route exact path='checkout' element={<Checkout />} />
         <Route exact path='about' element={<About />} />
         <Route exact path='contact' element={<Contact />} />
-        {/* <Route exact path='signup' element={<SignUp />} /> */}
+        <Route path='/login' element={<loginTwo />} />
+        <Route path='*' element={<NotFound />} />
       </Routes> 
     <Footer></Footer>
     </AuthProvider>
