@@ -35,6 +35,7 @@ const Product = () => {
             <div className="container">
                 <div className="row justify-content-around">
                     {DATA.map(cardItem)}
+                    {phones.map(cardItem)}
                 </div>
             </div>
         </>
