@@ -139,7 +139,7 @@ const Checkout = () => {
 
                             <h4 className="mb-3">Payment</h4>
 
-                            <div className="my-3">
+                            {/* <div className="my-3">
                                 <div className="form-check">
                                     <input id="credit" name="paymentMethod" type="radio" className="form-check-input" checked="" required="" />
                                     <label className="form-check-label" htmlFor="credit">Credit card</label>
@@ -152,7 +152,7 @@ const Checkout = () => {
                                     <input id="paypal" name="paymentMethod" type="radio" className="form-check-input" required="" />
                                     <label className="form-check-label" htmlFor="paypal">PayPal</label>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="row gy-3">
                                 <div className="col-md-6">

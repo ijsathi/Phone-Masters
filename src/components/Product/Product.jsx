@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import DATA from '../../Data';
 
 const Product = () => {
+    const [phones, setPhones] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/phones')
+        .then(result=> result.json())
+        .then(data=>setPhones(data))
+    },[])
     const cardItem = (item) => {
         return (
             <div className="card  my-5 py-4" key={item.id} style={{width: "18rem"}}>

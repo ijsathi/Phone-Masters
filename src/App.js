@@ -10,7 +10,7 @@ import {Navigate, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import AuthProvider from './context/AuthProvider';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
